@@ -1,3 +1,5 @@
+'Thanks NYANxCAT
+
 'Form1/Main:
     Dim s As String = New IO.FileInfo(Application.ExecutablePath).Name
     Dim loggerPath As String = IO.Path.GetTempPath & "\" & s & ".log"
